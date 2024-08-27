@@ -13,10 +13,9 @@ app.get("/api/products", (req, res) => {
 
   res.json(newProducts);
 });
-
-//retriving params
 app.get("/api/products/:productID", (req, res) => {
   // console.log(req)
+
   // console.log(req.params)
   const { productID } = req.params;
 
@@ -35,7 +34,6 @@ app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
   res.send("hello world");
 });
 
-//retriving query data
 app.get("/api/v1/query", (req, res) => {
   // console.log(req.query)
   const { search, limit } = req.query;
